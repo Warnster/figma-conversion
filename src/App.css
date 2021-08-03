@@ -3,6 +3,10 @@
   grid-template-columns: 5% auto 5%;
 }
 
+.header-container {
+  position: relative;
+}
+
 .header {
   grid-column: 2;
   margin-top: 48px;
@@ -12,8 +16,6 @@
     display: inline;
 }
 .destinations{
-    position: absolute;
-    top: 30%;
     color: #212832;
     width: 51px;
     height: 22px;
@@ -22,6 +24,14 @@
     font-style: normal;
     font-size: 17px;    
 }
-.header-container{
-    position: relative;
+
+
+
+.nav-link-container {
+  position: absolute;
+  top: 30%;
+}
+
+.nav-link-container > .active {
+  font-weight: bold;
 }
