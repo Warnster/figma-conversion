@@ -25,11 +25,13 @@ export function Header(){
         },
         {
             text: 'Signup',
-            active: false
+            active: false,
+            className:'button'
         },
         {
             text: 'EN',
-            active: false
+            active: false,
+            className: 'dropdown'
         },
     ]
 
@@ -37,13 +39,27 @@ export function Header(){
         <div className="logo"> <img src="/Logo.png" /> </div>
 
         <span className="nav-link-container">
+
         {navbarLinks.map((link) => {
-            return <span className={`destinations ${link.active === true ? 'active' : ''}`}> {link.text} </span>
+
+            return <span className={`destinations ${link.active === true ? 'active' : ''}` + link.className} > 
+            {link.text} 
+            {link.className === 'dropdown' ? <img src="Vector1.png"/> : ''}
+            
+            
+        </span>
+
         })}
+
         </span> 
+        
     </div>
 
-   
+
+
+
+
+
     
 
 }; 
