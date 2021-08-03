@@ -5,4 +5,10 @@
 
 .header {
   grid-column: 2;
+  margin-top: 48px;
+}
+.logo {
+    margin-right: 220px;
+    display: inline;
+
 }
