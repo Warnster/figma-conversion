@@ -1,5 +1,4 @@
 
-
 export function Header(){ 
 
     const navbarLinks = [
@@ -34,15 +33,17 @@ export function Header(){
             className: 'dropdown'
         },
     ]
+   
 
     return <div className="header-container">
         <div className="logo"> <img src="/Logo.png" /> </div>
 
+        <div className="flex-container"> 
         <span className="nav-link-container">
 
         {navbarLinks.map((link) => {
 
-            return <span className={`destinations ${link.active === true ? 'active' : ''}` + link.className} > 
+            return <span className={`destinations ${link.active === true ? 'active' : ''} ` + link.className} > 
             {link.text} 
             {link.className === 'dropdown' ? <img src="Vector1.png"/> : ''}
             
@@ -52,6 +53,7 @@ export function Header(){
         })}
 
         </span> 
+        </div>
         
     </div>
 
